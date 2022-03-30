@@ -1,0 +1,22 @@
+:root{ font-size: 12px;} 
+body { margin: 0px; } 
+.boxposition{ 
+        width: 50vw; 
+        height: 50vh; 
+        text-align: start; 
+        line-height: 50vh; 
+        font-size: 1rem; 
+        color: black; 
+}
+.boxpseudo{ 
+    width: 50vw; 
+    height: 50vh; 
+    text-align: left; 
+    line-height: 50vh; 
+    font-size: 1rem; 
+    color: black; 
+    background-color: greenyellow;
+}
+#id:hover{
+    background-color: brown;
+}

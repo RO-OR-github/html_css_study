@@ -1,0 +1,25 @@
+table {
+    width: 400px;
+    height: 150px;
+}
+table>thead>tr:first-child{
+    background : rgb(9, 208, 235);
+    color : rgb(0,0,0);
+}
+
+table>tbody>tr:nth-child(2n-1){
+    background : rgb(0, 0, 255);
+    color : rgb(255,255,255);
+}
+table>tbody>tr:nth-child(2n){
+    background : rgb(255, 228, 196);
+    color : rgb(0,0,0);
+}
+
+table>tbody>tr:nth-child(2n-1):hover{
+    background-color : rgb(221, 135, 210);
+}
+
+table>tbody>tr:nth-child(2n):hover{
+    background-color : rgb(2, 78, 2);
+}
