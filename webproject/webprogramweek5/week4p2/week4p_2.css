@@ -1,22 +1,38 @@
-:root{ font-size: 12px;} 
-body { margin: 0px; } 
+:root{ font-size: 12px;} /*최상위 엘리먼트(html)*/
+body { margin: 1vw; } 
+h1{
+    font-size: 5rem;
+}
 .boxposition{ 
-        width: 50vw; 
-        height: 50vh; 
+        width: 43vw; 
+        height: 43vh; 
         text-align: start; 
-        line-height: 50vh; 
-        font-size: 1rem; 
+        line-height: 3vh; 
+        font-size: 3rem; 
         color: black; 
+        background-color: whitesmoke
 }
 .boxpseudo{ 
-    width: 50vw; 
-    height: 50vh; 
-    text-align: left; 
-    line-height: 50vh; 
-    font-size: 1rem; 
-    color: black; 
+    width: 43vw; 
+    height: 43vh; 
+    text-align: start; 
+    line-height: 3vh; /*줄높이 속성*/
+    font-size: 3rem; 
+    color : black ;
     background-color: greenyellow;
 }
-#id:hover{
+#id:focus{
     background-color: brown;
+}
+
+span{
+    color: greenyellow;
+}
+
+span:hover{
+    color: brown;
+}
+input[type = "text"]{
+    width: 20vw;
+    height: 1.5vh;
 }
