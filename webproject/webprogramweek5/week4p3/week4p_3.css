@@ -1,0 +1,65 @@
+.box1{ 
+    width: 90vw; 
+    height: 70vh; 
+    font-size: 1.5rem; 
+    color: black; 
+    background-color: orange;
+}
+.list{
+    width: 30em; 
+    height: 15em; 
+    background-color: aquamarine;
+    text-align: start; 
+    line-height: 3vh; 
+    font-size: 1.5rem; 
+ 
+}
+#heading{
+    color : orangered;
+    font-size: 70px;
+}
+div strong{
+    background-color: yellow;
+    color : blue;
+}
+
+
+
+li:first-child>a{
+    color : blue
+}
+li:first-child>a:hover{
+    background-color: greenyellow;
+    font-size: 150%;
+}
+li:last-child>a{
+    color : green
+}
+li:last-child>a:hover{
+    background-color: greenyellow;
+    font-size: 150%;
+}
+li:nth-child(2)>a{
+    color : red 
+}
+li:nth-child(2)>a:hover{
+    background-color: greenyellow;
+    font-size: 150%;
+}
+
+
+ul+div, ul+div>strong{
+    color : white;
+    font-size: 1.5rem; 
+    background-color: orange;  
+}
+
+.box1 ul{
+    width: 45em;
+    height:20em;
+
+}
+
+a:link{
+    text-decoration: none;
+}
