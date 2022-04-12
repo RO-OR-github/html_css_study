@@ -1,0 +1,25 @@
+table, th, td {
+  border:1px solid #ccc;
+  border-collapse: collapse;
+}
+th, td { 
+  padding : 10px 20px;
+}
+div{
+  border : solid 1px;
+  margin : 30px auto;
+  padding : 30px;
+  width : 700px;
+}
+#container{
+  border : none; /*두줄이 생기므로*/
+  width : 1000px;
+}
+#description{
+  border-top-left-radius : 20px;
+  border-top-right-radius :20px;
+}
+#package{
+  border-bottom-left-radius : 20px;
+  border-bottom-right-radius :20px;
+}
