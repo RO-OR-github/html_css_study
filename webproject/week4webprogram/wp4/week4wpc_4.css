@@ -1,0 +1,30 @@
+h1{
+    color : orangered
+}
+h3{
+    color : lightcoral
+}
+h4{
+    color : skyblue
+}
+.west{
+    color : skyblue
+}
+
+.energy{
+    color : slateblue
+}
+
+#fog{
+    color : gray;
+}
+
+.see{
+    color : purple
+}
+
+.as{
+    color : red;
+    background : yellow;
+}
+

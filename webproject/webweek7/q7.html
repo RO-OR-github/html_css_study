@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:7px;
+        }
+        nav{
+            position: relative;
+            overflow: hidden;
+            width:100%;
+            height:50px;
+            border: solid 2px wheat;
+        }
+        .left{
+            float:left;
+            margin:7px 0;
+        }
+        ul{
+            list-style:none;
+            margin :0;
+            padding:0;
+        }
+        li{
+            margin :0;
+            padding:0;
+        }
+        a{
+            text-decoration: none;
+        }
+        .gnb>*{
+            display: inline-block;
+        }
+        .right{
+            float:right;
+        }
+        aside{
+            float:right;
+            margin-top:70px;
+        }
+        section{
+            float:left;
+            width :70%;
+            margin-top:70px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>레이아웃 구성하기</h1>
+    </header>
+    
+    <nav>
+        <div class="left">
+            <ul class="gnb">
+                <li>메일</li>
+                <li>카페</li>
+                <li>블로그</li>
+                <li>쇼핑</li>
+                <li>사전</li>
+                <li>뉴스</li>
+                <li>증권</li>
+                <li>부동산</li>
+                <li>지도</li>
+            </ul>
+        </div>
+        <div class="right">
+            <ul class="rank">
+                <li>실시간 검색순위</li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section>
+            <h4>foat 속성 사용</h4>
+            <br>
+            <p>2022년 04월 21일</p>
+            <br>
+            <P>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elit elit, ornare non elementum ut, imperdiet nec
+                felis. Proin leo felis, congue vitae facilisis id, ullamcorper vitae ipsum. Integer a risus sed libero imperdiet
+                lacinia vel vel massa. Vestibulum tempus ullamcorper tellus vitae gravida. Donec cursus, enim at porta auctor,
+                purus sapien luctus erat, vitae placerat ante nibh eget lectus. Integer a leo sit amet neque suscipit commodo sed
+                et mauris. Nullam a turpis nunc. Ut metus risus, 
+            </P>
+    </section>
+    <aside>
+        <div>
+            <h3>카테고리</h3>
+            <ul>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+                <li><a href="#">데이터</a></li>
+            </ul>
+         </div>
+    </aside>
+</body>
+</html>
