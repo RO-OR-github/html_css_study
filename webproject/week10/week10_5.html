@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        class Guguda{
+            constructor(){
+                this.score = 0;
+                this.num1 = 0;
+                this.num2 = 0;
+                this.answer = 0;
+                this.input = 0; 
+            }
+            scorepass(){
+                if(this.score * 10 >= 90){
+                    alert(`친구와 놀아도 됩니다.`);
+                }else if(this.score * 10 >= 80 && this.score * 10 < 90){
+                    alert(`한번 더 연습하세요.`);
+                }else if(this.score * 10 >= 70 && this.score * 10 < 80){
+                    alert(`두번 더 연습하세요.`)
+                }else{
+                    alert(`친구와 놀 수 없습니다.`)
+                }
+            }
+            question(i){
+                for(i=i; i<11; i++){
+                    this.num1 = Math.ceil(Math.random()*9);
+                    this.num2 = Math.ceil(Math.random()*9);
+                    this.answer = this.num1*this.num2;
+                    
+                    this.input = prompt(`${i}] ${this.num1}*${this.num2} = ?`);
+                    if(Number(this.input) == this.answer){
+                        this.score++;
+                    }else{
+                        this.score=this.score;
+                    }
+                }
+            }
+        }
+        const gugudan = new Guguda();
+        gugudan.question(1);
+        gugudan.scorepass();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

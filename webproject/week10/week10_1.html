@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <title>함수</title>
+    <script>
+        let song = {
+            singer : '이소라',
+            title : '바람이 분다',
+            time : 3.5,
+            play : function(cnt){
+               for(i=0; i<cnt; i++){
+                document.write(`가수 : ${this.singer},제목 : ${this.title}, 재생시간 : ${this.time*(i+1)} ==> ${i+1} 번째 재생 <br>`);
+               }
+            }
+        }
+        console.log(song.play(5));
+    </script>
+</body>
+</html>

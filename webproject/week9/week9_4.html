@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin : 0;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        nav.menu_bar{
+            padding : 15px;
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            background: aquamarine;
+        }
+        ul.menu_item{
+            display:flex;
+            list-style-type: none;
+        }
+        ul.menu_item>li{
+            margin: 10px;
+            border-radius: 2px;
+        }
+        ul.menu_item>li:first-child{
+            background: blue;
+        }
+        @media all and (max-width : 1000px){
+            nav.menu_bar{
+                padding : 0;
+                display:flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
+                background: aquamarine;
+            }
+            ul.menu_item{
+                margin : 0;
+                padding : 0;
+                width : 100%;
+                order: 3;
+                flex-grow : 1;
+                flex-flow: column wrap;
+                justify-items: center;
+            }
+            ul.menu_item>li{
+                margin : 0;
+                padding : 0;
+                width : 100vw;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="menu_bar">
+        <div class="menu_left">
+            <a href="">Hallym</a>
+        </div>
+
+        <ul class="menu_item">
+            <li>대학소개</li>
+            <li>전공</li>
+            <li>대학생활</li>
+            <li>학사지원</li>
+        </ul>
+
+        <div class="menu_right">
+            <a href="">smartlead</a>
+        </div>
+    </nav>
+</body>
+
+</html>

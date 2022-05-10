@@ -1,0 +1,90 @@
+*{
+    margin : auto;
+}
+/*기본 설정*/
+ul{
+    list-style-type: none;
+}
+table{
+    width: 300px;
+    height: 90px;
+}
+nav{
+    width : 500px;
+    height: auto;
+    padding :10px;
+    background-color: aquamarine;
+    position: fixed;
+    left :10px;
+    display: flex;
+    align-items: center;
+}
+section{
+    width:100vw;
+    height : 75vh;
+    position : relative;
+    top : 25vh;
+}
+div.footer{
+    position: absolute;
+    bottom : 10px;
+    left : 15vw;
+    background: orange;
+    width : 300px;
+}
+
+
+/*테이블 및 참고사항*/
+section>div{
+    display : flex;
+    justify-content: center;
+}
+
+
+/*테이블 만들기*/
+table{
+    order : 2;
+    border-collapse: collapse;
+    margin : 0px 10px;
+}
+td{
+    border : blue 1.5px;
+    border-style: none none solid;
+}
+/*참고 사항*/
+#check{
+    width : 300px;
+    height : 90px;
+    background: mediumaquamarine;
+    border-radius: 5px;
+    margin : 0px 10px;
+    padding-top : 10px;
+    list-style-type: disc;
+
+}
+#check>li{
+    margin-top : 10px;
+    padding-right : 10px;
+}
+/*메뉴 세부 설정*/
+ul.menu{
+    padding : 0;
+    display: none;
+}
+nav:hover>ul.menu{
+   display : flex;
+}
+ul.menu>li{
+    margin : 10px 30px;
+}
+ul.menu>li:nth-of-type(1){
+    color:red;
+}
+
+ul.menu>li:nth-of-type(2){
+    color:blue;
+}
+
+ul.menuli:nth-of-type(3){
+    color:green;
+}

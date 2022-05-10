@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(number){
+          this.number = number;
+          this.dis = 0;
+        }
+        Car.prototype.dist = 0;
+        Car.prototype.addMileage= function() {
+            this.dis += this.dist;
+        }
+        Car.prototype.toString = function() {
+            return `차량번호 : ${this.number}   주행거리 : ${this.dis}`;
+        }
+        carinfo = new Array();
+        
+        a= prompt(`차량번호와 주행거리를 입력하세요.\n더 이상 없으면 '완료'를 입력 하세요.`)
+        i=a;
+        while(a !=`완료`){
+            carinfo =i.split(" ");
+            a= prompt(`차량번호와 주행거리를 입력하세요.\n더 이상 없으면 '완료'를 입력 하세요.`)
+            i =(i+" ")+a;
+        }
+        document.write(`<h1>결과를 출력합니다</h1><hr color="grey">`)
+        for(k=0; k<carinfo.length; k+=2){
+            let car = new Car(carinfo[k]);
+            car.dist=Number(carinfo[k+1]);
+            car.addMileage();
+            document.write(`${car.toString()}<br>`);
+        }
+
+    </script>
+    
+</body>
+</html>

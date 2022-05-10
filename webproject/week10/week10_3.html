@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        class Account{
+            constructor(name, money){
+                this.name = name;
+                this.money = money;
+            }
+            deposit(a){
+                this.money += a;
+                document.write(`${a} 예금 후 상태 입니다.<br>예금주 : ${this.name}<br>현재 잔액 : ${this.money}<br>`)
+                
+            }
+            withdraw(b){
+                document.write(`${b}을 인출하려고 합니다.<br>`)
+                if(this.money<b){
+                    document.write(`잔액부족 : ${b-this.money}`)
+                }else{
+                    this.money -= b;
+                    document.write(`${b} 출금 후 상태 입니다.<br>예금주 : ${this.name}<br>현재 잔액 : ${this.money}`)
+                }
+            }
+            display(){
+                return `현재 상태입니다.<br>예금주: ${this.name}<br>현재 잔액: ${this.money}`;
+            }
+        }
+        const acc = new Account("스크립트", 50000);
+        document.write(`${acc.display()}<br><br>`);
+        acc.deposit(50000);
+        document.write(`<br>`)
+        acc.withdraw(1000000);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
