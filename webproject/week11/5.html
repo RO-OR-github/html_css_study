@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행지</title>
+</head>
+<body>
+    <a href="javascript:insert()">이곳을 클릭하여 가고 싶은 여행지를 입력하세요</a>
+    <ul>희망하는 장소 입니다</ul>
+    <script>
+        let count = 1;
+        function insert(){
+            
+            let input='';
+            let inna = document.querySelector("ul")
+            inna.style.listStyleType = "none";
+            while(true){
+                input = prompt("여행지를 입력하세요. 더 이상 없으면 'f'를 입력하세요");
+                if(input != 'f'){
+                    let newElem = document.createElement('li');
+                    let newText = document.createTextNode(count+')'+input);
+                    count++;
+                    newElem.appendChild(newText);
+                    inna.appendChild(newElem);
+                }else{
+                    break;
+                }
+            }
+            let elems = document.getElementsByTagName('li');
+            for(let i = 0; i<elems.length; i++){
+                if(i%2===0){
+                    elems[i].style.color = "red"
+                }else{
+                    elems[i].style.color = "green"
+                }
+            }
+        };
+
+    </script>
+  </body>
+  
+</html>

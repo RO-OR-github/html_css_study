@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        id : <input type="text" maxlength="8">
+        <p></p>
+        pass : <input type="text" maxlength="8">
+        <p></p>
+        <input type="button" value="추가하기" id="add">
+    </form>
+    <h3>------ input list -------</h3>
+    <hr>
+    <div id='container'></div>
+    <script>
+        function idtfc(){
+            if(idt.value.length >= 8){
+                passt.focus();
+            }
+          
+        }
+        function passtfc(keycode){
+            if(passt.value.length === 0 && keycode==8){
+               idt.focus();
+            }
+        }
+        function btclick(){
+            let newText = document.createTextNode(`id = ${idt.value} pass = ${passt.value}`);
+            alert(`데이터처리 완료 \n`+newText.textContent)
+            cot.appendChild(newText);
+            idt.value = null;
+            passt.value = null;
+        }
+        let cot = document.querySelector("#container");
+        let idt = document.querySelector('input:nth-of-type(1)');
+        let passt = document.querySelector('input:nth-of-type(2)');
+        let bt = document.querySelector('input[type="button"]');
+        idt.addEventListener('keydown',idtfc);
+        passt.addEventListener('keydown',function(e){
+            const keycode = e.keyCode;
+            passtfc(keycode);
+        });
+        bt.addEventListener('click',btclick);
+    </script>
+</body>
+</html>

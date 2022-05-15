@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h3> 항목 삭제 & 추가</h3>
+        <form>
+            name : <input type="text" id="name" required><br>
+        </form>
+    </div>
+    <hr>
+    <div id="list">
+        <p>사과</p>
+        <p>레몬</p>
+        <p>자두</p>
+    </div>
+    <input type="button" value="add" onclick="childNodeAdd()">
+    <input type="button" value="delete" onclick="childNodeDelete()"> <!--이미 click이 있어 따로 이벤트리스너 안해도 실행이 된다-->
+    <script>
+        function childNodeAdd() {
+            let inna = document.querySelector('input[type="text"]');
+            let elem = document.getElementById("list");
+            elem.innerHTML += `<p>${inna.value}</p>`;
+        }
+        function childNodeDelete(){
+            let delna = document.querySelector('input[type="text"]');
+            let delelem = document.querySelectorAll("#list>p");
+            for(let i = 0; i<delelem.length; i++){
+                if(delelem[i].textContent === delna.value){
+                    delelem[i].remove(); //현재노드(엘리멘트) 제거
+                }
+            }
+            
+            
+        }
+        // let btnadd = document.querySelector('input[value="add"]');
+        // let btndel = document.querySelector('input[value="delete"]');
+        // btnadd.addEventListener('onclick',childNodeAdd);
+        // btndel.addEventListener('click',childNodeDelete)
+        //html에서 onclick이 있어서 질문 1
+       
+    </script>
+</body>
+</html>

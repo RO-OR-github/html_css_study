@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>css 셀럭터 사용하기</h2>
+    <h4 class="hallym">css3</h4>
+    <h4 class="hallym">html</h4>
+    <h4 class="hallym">JavaScript</h4>
+    <h4 class="hallym">TypeScript</h4>
+    <h4 class="hallym">jQuery</h4>
+    
+    <script>
+        let elems = document.querySelectorAll('.hallym');
+
+        for (let i = 0; i < elems.length; i++) {
+            elems[i].style.width = "100px";
+            if (i % 2 === 0) {
+                elems[i].style.backgroundColor = "yellow";
+            } else {
+                elems[i].style.backgroundColor = "grey";
+            }
+        }
+    </script>
+</body>
+</html>
